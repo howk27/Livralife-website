@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Livra+ - Get in touch with our support team.">
+  <title>Contact - Livra+</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">Livra+</a>
+      <nav class="nav">
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="preview.html">App Preview</a></li>
+          <li><a href="verification.html">Support</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="https://apps.apple.com/app/id6756152051" class="btn btn-download">Download</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Content -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 600px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: var(--spacing-xl);">
+          <h1>Contact Us</h1>
+          <p style="font-size: var(--font-size-lg); color: var(--text-secondary);">
+            Have a question or need help? We're here for you.
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom: var(--spacing-lg);">
+          <h3 style="margin-bottom: var(--spacing-md);">Get in Touch</h3>
+          <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+            For support inquiries, please email us directly:
+          </p>
+          <div style="text-align: center; margin-top: var(--spacing-lg);">
+            <a href="mailto:support@livralife.com" class="btn btn-primary">
+              Email Support
+            </a>
+          </div>
+          <p style="margin-top: var(--spacing-md); text-align: center; color: var(--text-tertiary); font-size: var(--font-size-sm);">
+            support@livralife.com
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom: var(--spacing-md);">Contact Form</h3>
+          <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+            You can also use the form below. Note: This form uses a mailto link. For a production 
+            deployment, you may want to integrate with a form service like Wix Forms, Formspree, 
+            or similar.
+          </p>
+          
+          <form id="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-textarea" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <div class="card" style="margin-top: var(--spacing-lg); text-align: center;">
+          <h3 style="margin-bottom: var(--spacing-md);">Other Ways to Reach Us</h3>
+          <p style="color: var(--text-secondary);">
+            <strong>Developer Email:</strong> <a href="mailto:hello@livralife.com">hello@livralife.com</a><br>
+            <strong>Website:</strong> <a href="https://livralife.com">livralife.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="verification.html">Verification</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Livra+ — livralife.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const name = form.name.value;
+      const email = form.email.value;
+      const message = form.message.value;
+      
+      const subject = encodeURIComponent('Contact from Livra+ Website');
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+      const mailtoLink = `mailto:support@livralife.com?subject=${subject}&body=${body}`;
+      
+      window.location.href = mailtoLink;
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
