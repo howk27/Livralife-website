@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "AL8YGQM8GQ.com.livra.app",
+        "paths": [
+          "/auth/*",
+          "/reset-password/*",
+          "/*"
+        ]
+      }
+    ]
+  }
+}
